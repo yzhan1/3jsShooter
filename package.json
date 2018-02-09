@@ -1,0 +1,24 @@
+{
+  "name": "3jsshooter",
+  "version": "1.0.0",
+  "description": "A web-based shooter game created using 3JS, for class COSI-155 Computer Graphics",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yzhan1/3jsShooter.git"
+  },
+  "author": "Yaoming Zhan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yzhan1/3jsShooter/issues"
+  },
+  "homepage": "https://github.com/yzhan1/3jsShooter#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  }
+}

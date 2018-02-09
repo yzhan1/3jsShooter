@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fireball Shooter</title>
+    <script type="text/javascript" src="../libs/three.js"></script>
+	<script type="text/javascript" src="../libs/ParametricGeometries.js"></script>
+    <script type="text/javascript" src="../libs/ConvexGeometry.js"></script>
+    <script type="text/javascript" src="../libs/OBJLoader.js"></script>
+    <script type="text/javascript" src="../libs/MTLLoader.js"></script>
+    <script type="text/javascript" src="../libs/OBJMTLLoader.js"></script>
+    <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="../libs/stats.js"></script>
+    <script type="text/javascript" src="../libs/dat.gui.js"></script>
+    <script type="text/javascript" src="../libs/chroma.js"></script>
+    <script type="text/javascript" src="../controllers/FirstPersonControls.js"></script>
+	<script type="text/javascript" src="../assets/Fonts/helvetiker_regular.typeface.js"></script>
+    <script type="text/javascript" src="../assets/Fonts/helvetiker_bold.typeface.js"></script>
+    <link rel="stylesheet" href="../assets/index.css" type="text/css"/>
+</head>
+<body>
+    <div id="Stats-output"></div>
+    <div id="WebGL-output"></div>
+
+    <script id="vertexShader" type="x-shader/x-vertex">
+        varying vec2 vUv;
+        void main() {
+            vUv = uv;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0);
+        }
+    </script>
+    <script id="fragmentShader" type="x-shader/x-fragment">
+        uniform sampler2D tex;
+        uniform sampler2D tex2;
+        varying vec2 vUv;
+        uniform float texLevel;
+        uniform float texLevel2;
+        void main() {
+            vec4 texColor = texture2D(tex,vUv);
+            vec4 secondTexColor = texture2D(tex2,vUv);
+            gl_FragColor = texLevel*texColor + texLevel2*secondTexColor;
+        }
+    </script>
+    <script src="../controllers/game.js"></script>
+</body>
+</html>

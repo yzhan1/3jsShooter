@@ -1,0 +1,49 @@
+body {
+  /* set margin to 0 and overflow to hidden, to go fullscreen */
+  margin: 0;
+  overflow: hidden;
+  cursor: url(Images/crosshair.png), auto; 
+}
+
+#hud {
+  bottom: 35px;
+  position: absolute;
+  right: 40px;
+  z-index: 100;
+  font-size: 25px;
+  font-weight: bold;
+  font-variant: small-caps;
+  color: #ff0000;
+}
+
+#deadMessage {
+  bottom: 700px;
+  position: absolute;
+  right: 800px;
+  z-index: 100;
+  font-size: 40px;
+  font-weight: bold;
+  font-variant: small-caps;
+  color: #003d66;
+}
+
+#saveMessage {
+  bottom: 700px;
+  position: absolute;
+  right: 800px;
+  z-index: 100;
+  font-size: 40px;
+  font-weight: bold;
+  font-variant: small-caps;
+  color: #003d66;
+}
+
+#help {
+  bottom: 750px;
+  position: absolute;
+  right: 75px;
+  z-index: 100;
+  font-size: 30px;
+  font-weight: bold;
+  font-variant: small-caps;
+}
